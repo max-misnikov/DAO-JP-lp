@@ -49,3 +49,9 @@ p {
         display: none;
     }
 }
+
+.mobile-break {
+    @include md-screen {
+        display: none;
+    }
+}

@@ -474,6 +474,12 @@ p {
   }
 }
 
+@media only screen and (min-width: 750px) {
+  .mobile-break {
+    display: none;
+  }
+}
+
 header {
   align-items: center;
   background: #0c2780;
@@ -607,7 +613,7 @@ footer span {
 }
 .hero video.mobile {
   border: 2px solid #0c2780;
-  border-radius: 10px;
+  border-radius: 8px;
   margin: 0 auto;
   margin-bottom: 1.8em;
 }
@@ -705,7 +711,7 @@ hr.on-gray::after {
 }
 .cta .cta-box {
   background-color: #fff;
-  border-radius: 12px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -737,7 +743,7 @@ hr.on-gray::after {
 .cta .button {
   align-items: center;
   background-color: #fe9833;
-  border-radius: 6px;
+  border-radius: 8px;
   box-shadow: 0 6px #ce701c;
   color: #fff;
   display: flex;
@@ -827,25 +833,30 @@ hr.on-gray::after {
   width: 100%;
 }
 
-.ease-of-use .headers, .alerts .headers {
+.ease-of-use .headers,
+.alerts .headers {
   padding-top: 2em;
   text-align: center;
 }
-.ease-of-use .headers div:nth-of-type(1), .alerts .headers div:nth-of-type(1) {
+.ease-of-use .headers div:nth-of-type(1),
+.alerts .headers div:nth-of-type(1) {
   font-size: 1.2em;
   margin-bottom: -0.5em;
 }
-.ease-of-use .headers div:last-of-type, .alerts .headers div:last-of-type {
+.ease-of-use .headers div:last-of-type,
+.alerts .headers div:last-of-type {
   font-size: 1.6em;
   margin-top: -0.5em;
 }
-.ease-of-use video, .alerts video {
+.ease-of-use video,
+.alerts video {
   border: 2px solid #0c2780;
-  border-radius: 10px;
+  border-radius: 8px;
   display: block;
   margin: 2em auto;
 }
-.ease-of-use .subtitle, .alerts .subtitle {
+.ease-of-use .subtitle,
+.alerts .subtitle {
   font-size: 1.2em;
   font-weight: 500;
   text-align: center;
@@ -866,12 +877,87 @@ hr.on-gray::after {
   background-color: #dfeafe;
   border-radius: 1em;
   display: inline-block;
-  margin: 2em 0;
+  margin: 2em 0 1em;
   padding: 4px 2em;
+  position: relative;
+}
+.min-deposit .bubble-header::after {
+  border: 8px solid transparent;
+  border-top: 8px solid #dfeafe;
+  bottom: -12px;
+  content: "";
+  display: block;
+  height: 8px;
+  left: 50%;
+  position: absolute;
+  width: 8px;
+  transform: translateX(-50%);
 }
 .min-deposit .main-header {
   font-size: 2.3em;
+  margin-bottom: 0.5em;
 }
 .min-deposit .main-header span {
+  color: #0c46fc;
+}
+.min-deposit .content-box {
+  background-color: #f2f2f2;
+  padding: 1em;
+}
+.min-deposit .box-title {
+  background-color: #0c2780;
+  color: #fff;
+  border-radius: 1em;
+  display: inline-block;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  padding: 0.25em 1em;
+}
+.min-deposit .deposit-box {
+  display: flex;
+}
+.min-deposit .deposit-box.white {
+  background-color: #fff;
+}
+.min-deposit .deposit-box.white .company {
+  background-color: #969da3;
+}
+.min-deposit .deposit-box.blue {
+  background-color: #dfeafe;
+}
+.min-deposit .deposit-box.blue .company {
+  background-color: #0c2780;
+}
+.min-deposit .deposit-box.blue .sum {
+  color: #0c46fc;
+}
+.min-deposit .deposit-box .company {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin: 1.5em;
+  min-width: 150px;
+  min-height: 70px;
+  padding: 1em;
+}
+.min-deposit .deposit-box .sum {
+  align-items: center;
+  border-left: 2px dotted #0c2780;
+  display: flex;
+  font-size: 1.6em;
+  font-weight: 500;
+  text-align: left;
+  padding: 0 1em;
+  width: 100%;
+}
+.min-deposit .deposit-box .logo {
+  width: 120px;
+}
+.min-deposit .subtitle {
+  font-size: 1.2em;
+  margin: 2em 0;
+}
+.min-deposit .subtitle span {
   color: #0c46fc;
 }/*# sourceMappingURL=styles.css.map */
