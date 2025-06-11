@@ -1,0 +1,18 @@
+footer {
+    background: $brand-blue-color;
+    height: $footer-height;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    
+    img {
+        height: 18px;
+    }
+    
+    span {
+        color: #fff;
+        display: block;
+        font-size: 12px;
+        padding-top: 8px;
+    }
+}

@@ -1,0 +1,51 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: $font-family;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    max-width: $container-width;
+    padding: 0 20px;
+    
+    &.full-height {
+        min-height: calc(100vh - #{$header-height + $footer-height});
+    }
+}
+
+.dummy-content {
+    padding: 60px 0 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: $text-title;
+}
+
+p {
+    font-size: $text-body;
+}
+
+.disclaimer {
+    color: #222;
+    font-size: $text-small;
+}
+
+.desktop {
+    display: none;
+
+    @include md-screen {
+        display: inherit;
+    }
+}
+
+.mobile {
+    display: inherit;
+
+    @include md-screen {
+        display: none;
+    }
+}

@@ -1,0 +1,13 @@
+header {
+    align-items: center;
+    background: $brand-blue-color;
+    display: flex;
+    height: $header-height;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+    img {
+        height: 24px;
+    }
+}

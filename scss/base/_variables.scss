@@ -1,0 +1,41 @@
+// Breakpoints
+$md-screen: 750px !default;
+$lg-screen: 980px !default;
+
+
+// Colors
+$gray-blue-color: #43528f;
+$brand-blue-color: #0c2780;
+$sat-blue-color: #0c46fc;
+$light-blue-color: #dfeafe;
+$green-color: #10aa19;
+$dark-green-color: #08780f;
+$orange-color: #fe9833;
+$dark-orange-color: #ce701c;
+$yellow-color: #fff733;
+$light-gray-color: #f2f2f2;
+
+// Typography
+$em-size: 16px;
+$font-family: "Noto Sans JP", sans-serif !default;
+
+// $text-small: em-calc(14px);
+// $text-body: em-calc(16px);
+// $text-title: em-calc(20px);
+
+$text-small: .8em;
+$text-subtitle: 1.2em;
+$text-title: 1.4em;
+$text-big-title: 1.6em;
+$text-xl-title: 2.3em;
+$text-body: 1em;
+
+// Grid variables
+$container-width: 1180px !default;
+
+// Misc
+$border-radius: 4px !default;
+
+// Element declarations
+$header-height: 60px;
+$footer-height: 80px;
