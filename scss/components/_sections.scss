@@ -178,6 +178,8 @@
     }
 }
 
+// General elements
+
 hr {
     height: auto;
     margin: 1em auto 1.5em;
@@ -189,7 +191,7 @@ hr {
 
         content: "";
         display: block;
-        border-right: 1px solid #fff;
+        border-right: 2px solid #fff;
         height: 12px;
         position: absolute;
         top: -6px;
@@ -200,30 +202,43 @@ hr {
     }
 
     &.on-blue {
-        border-top: 1px solid $light-blue-color;
+        border-top: 2px solid $light-blue-color;
 
         &::after {
             background-color: $brand-blue-color;
-            border-right: 1px solid $light-blue-color;
+            border-right: 2px solid $light-blue-color;
         }
     }
 
     &.on-white {
-        border-top: 1px solid #000;
+        border-top: 2px solid #000;
 
         &::after {
             background-color: #fff;
-            border-right: 1px solid #000;
+            border-right: 2px solid #000;
         }
     }
 
     &.on-gray {
-        border-top: 1px solid #000;
+        border-top: 2px solid #000;
 
         &::after {
             background-color: $light-gray-color;
-            border-right: 1px solid #000;
+            border-right: 2px solid #000;
         }
+    }
+}
+
+.highlighted-title {
+    background-color: #fff;
+    color: $sat-blue-color;
+    display: inline-block;
+    margin-bottom: 0.25em;
+    padding: 0.25em;
+
+    &.black {
+        background-color: #000;
+        color: #fff;
     }
 }
 
@@ -306,13 +321,14 @@ hr {
 
         span:nth-of-type(1) {
             color: $light-blue-color;
-            font-size: $text-title;
+            font-size: $text-big-title;
+            font-weight: 500;
             display: block;
             margin-bottom: 0.5em;
         }
 
         span:nth-of-type(2) {
-            font-size: $text-big-title;
+            font-size: $text-xl-title;
         }
     }
 
@@ -386,7 +402,8 @@ hr {
 }
 
 .ease-of-use,
-.alerts {
+.alerts,
+.demo {
     .headers {
         padding-top: 2em;
         text-align: center;
@@ -531,5 +548,13 @@ hr {
         span {
             color: $sat-blue-color;
         }
+    }
+}
+
+.demo {
+    background-color: $light-gray-color;
+
+    .header-block {
+        padding-top: 0.5em;
     }
 }

@@ -674,7 +674,7 @@ hr {
 hr::after {
   content: "";
   display: block;
-  border-right: 1px solid #fff;
+  border-right: 2px solid #fff;
   height: 12px;
   position: absolute;
   top: -6px;
@@ -684,25 +684,37 @@ hr::after {
   z-index: 1;
 }
 hr.on-blue {
-  border-top: 1px solid #dfeafe;
+  border-top: 2px solid #dfeafe;
 }
 hr.on-blue::after {
   background-color: #0c2780;
-  border-right: 1px solid #dfeafe;
+  border-right: 2px solid #dfeafe;
 }
 hr.on-white {
-  border-top: 1px solid #000;
+  border-top: 2px solid #000;
 }
 hr.on-white::after {
   background-color: #fff;
-  border-right: 1px solid #000;
+  border-right: 2px solid #000;
 }
 hr.on-gray {
-  border-top: 1px solid #000;
+  border-top: 2px solid #000;
 }
 hr.on-gray::after {
   background-color: #f2f2f2;
-  border-right: 1px solid #000;
+  border-right: 2px solid #000;
+}
+
+.highlighted-title {
+  background-color: #fff;
+  color: #0c46fc;
+  display: inline-block;
+  margin-bottom: 0.25em;
+  padding: 0.25em;
+}
+.highlighted-title.black {
+  background-color: #000;
+  color: #fff;
 }
 
 .cta {
@@ -771,12 +783,13 @@ hr.on-gray::after {
 }
 .benefits .headers span:nth-of-type(1) {
   color: #dfeafe;
-  font-size: 1.4em;
+  font-size: 1.6em;
+  font-weight: 500;
   display: block;
   margin-bottom: 0.5em;
 }
 .benefits .headers span:nth-of-type(2) {
-  font-size: 1.6em;
+  font-size: 2.3em;
 }
 .benefits .secondary-headers {
   background-color: #0c2780;
@@ -834,29 +847,34 @@ hr.on-gray::after {
 }
 
 .ease-of-use .headers,
-.alerts .headers {
+.alerts .headers,
+.demo .headers {
   padding-top: 2em;
   text-align: center;
 }
 .ease-of-use .headers div:nth-of-type(1),
-.alerts .headers div:nth-of-type(1) {
+.alerts .headers div:nth-of-type(1),
+.demo .headers div:nth-of-type(1) {
   font-size: 1.2em;
   margin-bottom: -0.5em;
 }
 .ease-of-use .headers div:last-of-type,
-.alerts .headers div:last-of-type {
+.alerts .headers div:last-of-type,
+.demo .headers div:last-of-type {
   font-size: 1.6em;
   margin-top: -0.5em;
 }
 .ease-of-use video,
-.alerts video {
+.alerts video,
+.demo video {
   border: 2px solid #0c2780;
   border-radius: 8px;
   display: block;
   margin: 2em auto;
 }
 .ease-of-use .subtitle,
-.alerts .subtitle {
+.alerts .subtitle,
+.demo .subtitle {
   font-size: 1.2em;
   font-weight: 500;
   text-align: center;
@@ -960,4 +978,11 @@ hr.on-gray::after {
 }
 .min-deposit .subtitle span {
   color: #0c46fc;
+}
+
+.demo {
+  background-color: #f2f2f2;
+}
+.demo .header-block {
+  padding-top: 0.5em;
 }/*# sourceMappingURL=styles.css.map */
