@@ -421,6 +421,31 @@ h6 {
     opacity: 1;
   }
 }
+@keyframes cta-bounce {
+  0% {
+    transform: scale(1);
+  }
+  85% {
+    transform: scale(1);
+  }
+  92% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes glow-pass {
+  0% {
+    transform: skewX(-45deg) translateX(-100%);
+  }
+  80% {
+    transform: skewX(-45deg) translateX(-100%);
+  }
+  100% {
+    transform: skewX(-45deg) translateX(100%);
+  }
+}
 html, body {
   height: 100%;
 }
@@ -1060,6 +1085,10 @@ video {
   z-index: 2;
 }
 .sticky-cta .cta-button {
+  -webkit-animation: cta-bounce 5s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation: cta-bounce 5s infinite ease-in-out;
+  animation-fill-mode: both;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -1068,6 +1097,19 @@ video {
   overflow: hidden;
   position: relative;
   width: 370px;
+}
+.sticky-cta .cta-button::before {
+  -webkit-animation: glow-pass 5s infinite ease-out;
+  -webkit-animation-fill-mode: both;
+  animation: glow-pass 5s infinite ease-out;
+  animation-fill-mode: both;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.65));
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: skewX(-45deg) translateX(100%);
 }
 .sticky-cta .cta-button .upper, .sticky-cta .cta-button .lower {
   padding: 0.5rem;

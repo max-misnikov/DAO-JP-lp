@@ -649,6 +649,7 @@ video {
     z-index: 2;
 
     .cta-button {
+        @include animation(cta-bounce 5s infinite ease-in-out);
         border-radius: $border-radius;
         display: flex;
         flex-direction: column;
@@ -657,6 +658,17 @@ video {
         overflow: hidden;
         position: relative;
         width: 370px;
+
+        &::before {
+            @include animation(glow-pass 5s infinite ease-out);
+            background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,.65));
+            content: '';
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transform: skewX(-45deg) translateX(100%);
+        }
 
         .upper, .lower {
             padding: .5rem;

@@ -4,6 +4,7 @@
         opacity: 0;
         @include transform(translateY(-10px));
     }
+
     100% {
         opacity: 1;
         @include transform(translateY(0));
@@ -14,7 +15,40 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
+    }
+}
+
+@include keyframes(cta-bounce) {
+    0% {
+        transform: scale(1);
+    }
+
+    85% {
+        transform: scale(1);
+    }
+
+    92% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@include keyframes(glow-pass) {
+    0% {
+        transform: skewX(-45deg) translateX(-100%);
+    }
+
+    80% {
+        transform: skewX(-45deg) translateX(-100%);
+    }
+
+    100% {
+        transform: skewX(-45deg) translateX(100%);
     }
 }
