@@ -1376,17 +1376,30 @@ video {
   background-color: #dfeafe;
   border-radius: 8px;
   display: inline-block;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 500;
   margin-bottom: 1rem;
   padding: 1rem;
   position: relative;
 }
 .features .qoute::after {
+  bottom: -4rem;
   color: #0c2780;
   content: '"';
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: "BIZ UDPGothic", sans-serif;
+  position: absolute;
+  right: 1rem;
+}
+.features .qoute::before {
+  color: #0c2780;
+  content: '"';
+  font-size: 4rem;
+  font-family: "BIZ UDPGothic", sans-serif;
+  left: 1rem;
+  position: absolute;
+  top: -4rem;
+  transform: rotate(180deg);
 }
 .features .arrow-down {
   border: 1rem solid transparent;

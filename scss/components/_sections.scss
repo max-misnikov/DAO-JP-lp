@@ -948,17 +948,31 @@ video {
         background-color: $light-blue-color;
         border-radius: $border-radius;
         display: inline-block;
-        font-size: $text-big-title;
+        font-size: $text-title;
         font-weight: 500;
         margin-bottom: 1rem;
         padding: 1rem;
         position: relative;
 
         &::after {
+            bottom: -4rem;
             color: $brand-blue-color;
             content: '"';
-            font-size: 3rem;
+            font-size: 4rem;
             font-family: "BIZ UDPGothic", sans-serif;
+            position: absolute;
+            right: 1rem;
+        }
+
+        &::before {
+            color: $brand-blue-color;
+            content: '"';
+            font-size: 4rem;
+            font-family: "BIZ UDPGothic", sans-serif;
+            left: 1rem;
+            position: absolute;
+            top: -4rem;
+            transform: rotate(180deg);
         }
     }
 
