@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&family=Noto+Sans+JP:wght@100..900&display=swap");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -686,7 +687,21 @@ button {
   text-align: center;
   outline: none;
   padding: 0.5em;
+  position: relative;
   transition: 0.3s all ease-in-out;
+}
+.cta-button::after {
+  border: transparent;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  content: "";
+  display: block;
+  height: 12px;
+  right: 1rem;
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  transform: rotate(45deg) translateX(-50%);
 }
 .cta-button.phone-button, .cta-button.email-button {
   background: #fff;
@@ -766,12 +781,13 @@ button {
 .cta .cta-box-header {
   background-color: #0c2780;
   color: #fff;
+  font-size: 1.4rem;
   text-align: center;
   padding: 0.5em;
 }
 .cta .cta-box-header .logo {
   vertical-align: baseline;
-  width: 100px;
+  width: 120px;
 }
 .cta .headers {
   align-items: center;
@@ -1027,6 +1043,20 @@ video {
 .why .section-header {
   font-size: 2.3rem;
   padding-top: 1em;
+  position: relative;
+}
+.why .section-header::before {
+  background: linear-gradient(to top, rgba(106, 163, 255, 0.4), rgba(255, 255, 255, 0));
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  content: "";
+  display: block;
+  height: 80px;
+  left: 50%;
+  position: absolute;
+  top: 2rem;
+  width: 200px;
+  transform: translateX(-50%);
 }
 .why .headers {
   font-size: 1.6rem;
@@ -1034,6 +1064,10 @@ video {
 }
 .why .headers span {
   color: #fff733;
+}
+.why .headers span.bigger {
+  font-size: 2.3rem;
+  font-weight: 600;
 }
 .why .headers .underlined {
   text-decoration: underline;
@@ -1060,6 +1094,7 @@ video {
 .alerts .headers div:last-of-type,
 .demo .headers div:last-of-type {
   font-size: 1.6rem;
+  font-weight: 600;
   margin-top: -0.5em;
 }
 .ease-of-use video,
@@ -1131,23 +1166,23 @@ video {
   display: flex;
   justify-content: center;
   margin: 1.5em;
-  max-width: 25%;
   min-width: 100px;
   min-height: 70px;
   padding: 0.5em;
+  width: 25%;
 }
 .min-deposit .deposit-box .sum {
   align-items: center;
   border-left: 2px dotted #0c2780;
   display: flex;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 500;
   text-align: left;
   padding: 0 1em;
   width: 100%;
 }
 .min-deposit .deposit-box .sum span {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 .min-deposit .deposit-box .logo {
   width: 100%;
@@ -1189,7 +1224,6 @@ video {
   margin-bottom: 2rem;
   padding: 3em 1em 0;
   position: relative;
-  overflow: hidden;
 }
 .ko .content-box::before {
   background: #fff;
@@ -1202,8 +1236,16 @@ video {
   width: 20px;
   transform: translateX(-50%) rotate(45deg);
 }
+.ko .content-box:last-of-type {
+  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+}
+.ko .content-box:last-of-type::before {
+  display: none;
+}
 .ko .content-strip {
   background: #0c2780;
+  border-radius: 0 0 8px 8px;
   color: #fff;
   padding: 1rem;
   position: relative;
@@ -1211,15 +1253,15 @@ video {
   transform: translateX(-1rem);
 }
 .ko .content-strip::after {
-  background: #000;
-  bottom: -20px;
+  background: #0c2780;
   content: "";
   display: block;
-  height: 20px;
   left: 50%;
   position: absolute;
+  bottom: -9px;
+  height: 20px;
   width: 20px;
-  z-index: 10;
+  transform: translateX(-50%) rotate(45deg);
 }
 .ko .header {
   font-size: 1.4rem;
@@ -1227,12 +1269,12 @@ video {
   margin-bottom: 1rem;
 }
 .ko .checklist {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   padding: 0 2rem;
   text-align: left;
 }
 .ko .checklist-item {
-  border-bottom: 3px dotted #000;
+  border-bottom: 2px dotted #000;
   font-weight: 500;
   padding: 0.5rem 0;
   position: relative;
@@ -1327,9 +1369,6 @@ video {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
-.features .subheader {
-  font-weight: 500;
-}
 .features .highlighted-title {
   font-size: 1.2rem;
 }
@@ -1341,6 +1380,13 @@ video {
   font-weight: 500;
   margin-bottom: 1rem;
   padding: 1rem;
+  position: relative;
+}
+.features .qoute::after {
+  color: #0c2780;
+  content: '"';
+  font-size: 3rem;
+  font-family: "BIZ UDPGothic", sans-serif;
 }
 .features .arrow-down {
   border: 1rem solid transparent;
@@ -1371,8 +1417,23 @@ video {
   font-size: 1rem;
   justify-content: center;
 }
+.features .globe-icon {
+  display: inline-block;
+  height: 2rem;
+  margin-right: 0.5rem;
+  position: relative;
+  top: 0.2rem;
+  width: 2rem;
+  vertical-align: baseline;
+}
+.features .text {
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
 .features .subheader {
   font-size: 1.4rem;
+  font-weight: 500;
   margin-bottom: 1rem;
   margin-top: 1.5rem;
 }
@@ -1525,12 +1586,10 @@ video {
   width: 70%;
 }
 .open-account .content-box {
-  border-radius: 8px;
   margin: 0 auto;
   margin-bottom: 2rem;
   padding: 0 1rem;
   position: relative;
-  overflow: hidden;
   width: 80%;
 }
 .open-account .content-box:last-of-type {
@@ -1538,18 +1597,24 @@ video {
 }
 .open-account .content-strip {
   background: #0c2780;
+  border-radius: 8px 8px 0 0;
   color: #fff;
   font-size: 1.6rem;
-  margin-bottom: 2rem;
   padding: 1rem;
   position: relative;
   text-align: center;
   width: calc(100% + 2rem);
   transform: translateX(-1rem);
 }
-.open-account .content-strip::after {
-  background: #0c2780;
-  bottom: -9px;
+.open-account .content-strip:last-of-type {
+  background: #0c46fc;
+  border-radius: 0 0 8px 8px;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+.open-account .content-strip:last-of-type::after {
+  background: #0c46fc;
+  bottom: -5px;
   content: "";
   display: block;
   height: 20px;
@@ -1558,14 +1623,6 @@ video {
   width: 20px;
   z-index: 10;
   transform: translateX(-50%) rotate(-45deg);
-}
-.open-account .content-strip:last-of-type {
-  background: #0c46fc;
-  font-size: 1.2rem;
-  margin-bottom: 0;
-}
-.open-account .content-strip:last-of-type::after {
-  display: none;
 }
 
 .support .brand-blue-bg {
