@@ -566,7 +566,7 @@ footer .social-icons {
   margin-top: 1rem;
 }
 footer .social-icons li {
-  margin: 0 0.25rem;
+  margin: 0 0.5rem;
 }
 
 hr {
@@ -686,6 +686,35 @@ button {
   text-align: center;
   outline: none;
   padding: 0.5em;
+  transition: 0.3s all ease-in-out;
+}
+.cta-button.phone-button, .cta-button.email-button {
+  background: #fff;
+  border: 2px solid #0c2780;
+  box-shadow: none;
+  color: #0c2780;
+  font-weight: 600;
+  position: relative;
+}
+.cta-button.phone-button::before, .cta-button.email-button::before {
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 20px;
+  left: 2rem;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  transform: translateY(-50%);
+}
+.cta-button.phone-button.phone-button::before, .cta-button.email-button.phone-button::before {
+  background-image: url("../assets/icon-phone.svg");
+}
+.cta-button.phone-button.email-button::before, .cta-button.email-button.email-button::before {
+  background-image: url("../assets/icon-email.svg");
+}
+.cta-button:hover {
+  transform: scale(103%);
 }
 
 .award-item {
@@ -1537,6 +1566,39 @@ video {
 }
 .open-account .content-strip:last-of-type::after {
   display: none;
+}
+
+.support .brand-blue-bg {
+  padding: 1rem 0;
+}
+.support .section-header {
+  color: #fff;
+  text-align: center;
+  font-size: 2.3rem;
+}
+.support .headers {
+  margin-top: 2rem;
+  text-align: center;
+}
+.support .header {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.support .subheader {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.support .buttons .header {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.support .disclaimer {
+  margin: 1rem 0 2rem;
+  text-align: center;
 }
 
 .sticky-cta {

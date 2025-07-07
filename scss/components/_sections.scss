@@ -134,6 +134,47 @@ button {
     text-align: center;
     outline: none;
     padding: .5em;
+    transition: .3s all ease-in-out;
+
+    &.phone-button,
+    &.email-button {
+        background: #fff;
+        border: 2px solid $brand-blue-color;
+        box-shadow: none;
+        color: $brand-blue-color;
+        font-weight: 600;
+        position: relative;
+
+        &::before {
+            background-size: contain;
+            content: '';
+            display: block;
+            height: 20px;
+            left: 2rem;
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            transform: translateY(-50%);
+        }
+
+        &.phone-button {
+            &::before {
+                background-image: url('../assets/icon-phone.svg');
+
+            }
+        }
+
+        &.email-button {
+            &::before {
+                background-image: url('../assets/icon-email.svg');
+
+            }
+        }
+    }
+
+    &:hover {
+        transform: scale(103%);
+    }
 }
 
 .award-item {
@@ -1147,6 +1188,48 @@ video {
                 display: none;
             }
         }
+    }
+}
+
+.support {
+    .brand-blue-bg {
+        padding: 1rem 0;
+    }
+    .section-header {
+        color:#fff;
+        text-align: center;
+        font-size: $text-xl-title;
+    }
+
+    .headers {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    
+    .header {
+        font-size: $text-subtitle;
+        font-weight: 500;
+    }
+
+    .subheader {
+        font-size: $text-big-title;
+        font-weight: 600;
+    }
+
+    .buttons {
+        .header {
+            font-size: $text-subtitle;
+            font-weight: 600;
+            margin-top: 2rem;
+            text-align: center;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+    }
+    
+    .disclaimer {
+        margin: 1rem 0 2rem;
+        text-align: center;
     }
 }
 
