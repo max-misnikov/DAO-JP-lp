@@ -7,7 +7,20 @@ header {
     text-align: center;
     width: 100%;
 
+    @include md-screen {
+        justify-content: flex-start;
+    }
+
+    .content-wrapper.hero {
+        width: 100%;
+
+        @include md-screen {
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    }
+
     img {
-        height: 24px;
+        height: 30px;
     }
 }

@@ -515,8 +515,22 @@ header {
   text-align: center;
   width: 100%;
 }
+@media only screen and (min-width: 750px) {
+  header {
+    justify-content: flex-start;
+  }
+}
+header .content-wrapper.hero {
+  width: 100%;
+}
+@media only screen and (min-width: 750px) {
+  header .content-wrapper.hero {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
 header img {
-  height: 24px;
+  height: 30px;
 }
 
 footer {
@@ -572,7 +586,7 @@ footer .social-icons li {
 
 hr {
   height: auto;
-  margin: 1em auto 1.5em;
+  margin: 0.5em auto 1.5em;
   max-width: 300px;
   overflow: inherit;
   position: relative;
@@ -732,30 +746,59 @@ button {
   transform: scale(103%);
 }
 
+.awards-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media only screen and (min-width: 750px) {
+  .awards-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 .award-item {
+  display: inline-block;
   font-size: 1.2rem;
   font-weight: 600;
   margin: 0.8em 0;
   text-align: center;
+  padding: 0 1rem;
   position: relative;
+}
+@media only screen and (min-width: 750px) {
+  .award-item {
+    width: 45%;
+  }
 }
 .award-item::before {
   content: url(../assets/award-leaves-half.svg);
   height: auto;
-  left: 1em;
+  left: -1em;
   position: absolute;
   top: 60%;
   width: 30px;
   transform: translateY(-50%);
 }
+@media only screen and (min-width: 750px) {
+  .award-item::before {
+    left: 1rem;
+  }
+}
 .award-item::after {
   content: url(../assets/award-leaves-half.svg);
   height: auto;
-  right: 1em;
+  right: -1em;
   position: absolute;
   top: 60%;
   width: 30px;
   transform: scaleX(-1) translateY(-50%);
+}
+@media only screen and (min-width: 750px) {
+  .award-item::after {
+    right: 1rem;
+  }
 }
 .award-item.blue-leaves {
   color: #0c2780;
@@ -777,6 +820,12 @@ button {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+@media only screen and (min-width: 750px) {
+  .cta .cta-box {
+    margin: 0 auto;
+    width: 70%;
+  }
 }
 .cta .cta-box-header {
   background-color: #0c2780;
@@ -805,10 +854,20 @@ button {
 .cta .headers img {
   max-width: 80px;
 }
+@media only screen and (min-width: 750px) {
+  .cta .headers, .cta .buttons {
+    width: 50%;
+  }
+}
 .cta .cta-box-content {
   display: flex;
   flex-direction: column;
   padding: 1em 1.5em;
+}
+@media only screen and (min-width: 750px) {
+  .cta .cta-box-content {
+    flex-direction: row;
+  }
 }
 .cta .top-button span:nth-of-type(1) {
   color: #fff733;
@@ -862,26 +921,62 @@ video {
 }
 
 .hero {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  position: relative;
+}
+@media only screen and (min-width: 750px) {
+  .hero {
+    flex-direction: row;
+  }
+}
+.hero .content-wrapper.hero {
+  display: flex;
+}
+@media only screen and (min-width: 750px) {
+  .hero .content-wrapper.hero {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
 .hero .orange-ribbon {
   background: #fe9833;
   padding: 4px 0;
 }
+@media only screen and (min-width: 750px) {
+  .hero .orange-ribbon {
+    padding: 1rem 0;
+  }
+}
 .hero .orange-ribbon .primary {
   color: #fff733;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+}
+@media only screen and (min-width: 750px) {
+  .hero .orange-ribbon .primary {
+    font-size: 1.6rem;
+  }
 }
 .hero .orange-ribbon .primary b {
-  font-size: 1.5em;
+  font-size: 2.3rem;
+}
+@media only screen and (min-width: 750px) {
+  .hero .orange-ribbon .primary b {
+    font-size: 2rem;
+  }
 }
 .hero .orange-ribbon .primary span {
   color: #fff;
   font-size: 0.8em;
   margin-right: 0.5em;
   position: relative;
+}
+@media only screen and (min-width: 750px) {
+  .hero .orange-ribbon .primary span {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
 }
 .hero .orange-ribbon .primary span::after {
   border: 1px solid #fff;
@@ -895,14 +990,37 @@ video {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media only screen and (min-width: 750px) {
+  .hero .orange-ribbon .primary span::after {
+    height: 54px;
+    width: 54px;
+  }
+}
 .hero .orange-ribbon .secondary {
   color: #fff;
 }
-.hero .orange-ribbon + div {
+@media only screen and (min-width: 750px) {
+  .hero .orange-ribbon .secondary {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .hero .ribbon-content {
+    align-items: flex-start;
+    width: 55%;
+  }
+}
+.hero .hero-elements {
+  display: inline-block;
   padding-top: 1em;
   font-weight: 500;
   font-size: 1.2em;
   margin-bottom: 1em;
+}
+@media only screen and (min-width: 750px) {
+  .hero .hero-elements {
+    width: 55%;
+  }
 }
 .hero .blue-ribbon {
   background-color: #0c46fc;
@@ -935,12 +1053,17 @@ video {
   flex-direction: row;
 }
 .hero .tabs .tab {
-  font-size: 1em;
+  font-size: 1.2rem;
   padding: 0.5em 0.5em;
   width: 33.33%;
 }
+@media only screen and (min-width: 750px) {
+  .hero .tabs .tab {
+    width: 18%;
+  }
+}
 .hero .tabs .tab span {
-  font-size: 0.8em;
+  font-size: 1rem;
   display: block;
 }
 .hero .tabs .tab.active {
@@ -952,6 +1075,8 @@ video {
 @media only screen and (min-width: 750px) {
   .hero .image-side {
     display: initial;
+    position: absolute;
+    left: 57%;
   }
 }
 .hero video.mobile {
@@ -959,6 +1084,10 @@ video {
   border-radius: 8px;
   margin: 0 auto;
   margin-bottom: 1.8em;
+  width: 100%;
+}
+.hero video.desktop {
+  width: 465px;
 }
 
 .awards {
@@ -970,6 +1099,7 @@ video {
 .awards .logo {
   margin: 0 auto;
   margin-bottom: 1em;
+  max-width: 240px;
   width: 50%;
 }
 .awards .small-disclaimer {
@@ -978,6 +1108,9 @@ video {
 .awards p.small-text {
   font-size: 0.8em;
   margin-top: 1em;
+}
+.awards .subtitle {
+  font-size: 1.4rem;
 }
 
 .benefits .headers {

@@ -2,7 +2,7 @@
 
 hr {
     height: auto;
-    margin: 1em auto 1.5em;
+    margin: .5em auto 1.5em;
     max-width: 300px;
     overflow: inherit;
     position: relative;
@@ -191,32 +191,56 @@ button {
         transform: scale(103%);
     }
 }
+.awards-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include md-screen {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
 
 .award-item {
+    display: inline-block;
     font-size: $text-subtitle;
     font-weight: 600;
     margin: .8em 0;
     text-align: center;
+    padding: 0 1rem;
     position: relative;
+
+    @include md-screen {
+        width: 45%;
+    }
 
     &::before {
         content: url(../assets/award-leaves-half.svg);
         height: auto;
-        left: 1em;
+        left: -1em;
         position: absolute;
         top: 60%;
         width: 30px;
         transform: translateY(-50%);
+
+        @include md-screen {
+            left: 1rem;
+        }
     }
 
     &::after {
         content: url(../assets/award-leaves-half.svg);
         height: auto;
-        right: 1em;
+        right: -1em;
         position: absolute;
         top: 60%;
         width: 30px;
         transform: scaleX(-1) translateY(-50%);
+
+        @include md-screen {
+            right: 1rem;
+        }
     }
 
     &.blue-leaves {
@@ -244,6 +268,10 @@ button {
         flex-direction: column;
         overflow: hidden;
 
+        @include md-screen {
+            margin: 0 auto;
+            width: 70%;
+        }
     }
 
     .cta-box-header {
@@ -278,10 +306,20 @@ button {
         }
     }
 
+    .headers, .buttons {
+        @include md-screen {
+            width: 50%;
+        }
+    }
+
     .cta-box-content {
         display: flex;
         flex-direction: column;
         padding: 1em 1.5em;
+
+        @include md-screen {
+            flex-direction: row;
+        }
     }
 
     .top-button {
@@ -347,21 +385,50 @@ video {
 // End of General elements
 
 .hero {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    position: relative;
+
+    @include md-screen {
+        flex-direction: row;
+    }
+
+    .content-wrapper.hero {
+        display: flex;
+
+        @include md-screen {
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    }
 
     .orange-ribbon {
         background: $orange-color;
         padding: 4px 0;
 
+        @include md-screen {
+            padding: 1rem 0;
+        }
+
+        .content-wrapper {
+            // display: flex;
+        }
+
         .primary {
             color: $yellow-color;
-            font-size: $text-subtitle;
+            font-size: $text-title;
+
+            @include md-screen {
+                font-size: $text-big-title;
+            }
 
             b {
-                font-size: 1.5em;
+                font-size: $text-xl-title;
 
+                @include md-screen {
+                    font-size: 2rem;
+                }
             }
 
             span {
@@ -369,6 +436,11 @@ video {
                 font-size: $text-small;
                 margin-right: .5em;
                 position: relative;
+
+                @include md-screen {
+                    font-size: $text-subtitle;
+                    margin-right: 1rem;
+                }
 
                 &::after {
                     border: 1px solid #fff;
@@ -381,19 +453,41 @@ video {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
+
+                    @include md-screen {
+                        height: 54px;
+                        width: 54px;
+                    }
                 }
             }
         }
 
         .secondary {
             color: #fff;
+
+            @include md-screen {
+                font-size: $text-title;
+            }
         }
 
-        &+div {
-            padding-top: 1em;
-            font-weight: 500;
-            font-size: 1.2em;
-            margin-bottom: 1em;
+    }
+
+    .ribbon-content {
+        @include md-screen {
+            align-items: flex-start;
+            width: 55%;
+        }
+    }
+    
+    .hero-elements {
+        display: inline-block;
+        padding-top: 1em;
+        font-weight: 500;
+        font-size: 1.2em;
+        margin-bottom: 1em;
+
+        @include md-screen {
+            width: 55%;
         }
     }
 
@@ -421,6 +515,10 @@ video {
     .content-side {
         text-align: center;
         width: 100%;
+
+        @include md-screen {
+
+        }
     }
 
     .tabs {
@@ -433,12 +531,16 @@ video {
         }
 
         .tab {
-            font-size: 1em;
+            font-size: $text-subtitle;
             padding: .5em .5em;
             width: 33.33%;
 
+            @include md-screen {
+                width: 18%;
+            }
+
             span {
-                font-size: 0.8em;
+                font-size: 1rem;
                 display: block;
             }
 
@@ -453,6 +555,8 @@ video {
 
         @include md-screen {
             display: initial;
+            position: absolute;
+            left: 57%;
         }
     }
 
@@ -461,6 +565,11 @@ video {
         border-radius: $border-radius;
         margin: 0 auto;
         margin-bottom: 1.8em;
+        width: 100%;
+    }
+
+    video.desktop {
+        width: 465px;
     }
 }
 
@@ -473,6 +582,7 @@ video {
     .logo {
         margin: 0 auto;
         margin-bottom: 1em;
+        max-width: 240px;
         width: 50%;
     }
 
@@ -483,6 +593,11 @@ video {
     p.small-text {
         font-size: $text-small;
         margin-top: 1em;
+    }
+
+    .subtitle {
+        font-size: $text-title;
+
     }
 }
 
